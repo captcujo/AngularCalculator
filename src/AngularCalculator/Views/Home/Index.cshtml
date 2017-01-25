@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="AngularCalculatorController">
+<head>
+    <title>AngularCalculator</title>
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css">
+    -->
+    <style>
+        body {
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body ng-controller="calculatorController as cal">
+    <br/>
+    <h2>Simple Angular Calculator</h2>
+    <br/>
+    <input type="text" placeholder="entered numbers" ng-model="cal.display" required/>
+    <br/>
+    <br/>
+    <input type="number" placeholder="results" ng-model="cal.results" required/>
+    <br/>
+    <br/>
+    <!--
+    <input type="number" placeholder="results" ng-model="cal.results"/>
+    <br/>
+    <br/>
+     -->
+    <button ng-click="cal.acceptNumber('7')">7</button>
+    <button ng-click="cal.acceptNumber('8')">8</button>
+    <button ng-click="cal.acceptNumber('9')">9</button>
+    <button ng-click="cal.acceptOperator('+')">+</button>
+     <br/>
+    <button ng-click="cal.acceptNumber('4')">4</button>
+    <button ng-click="cal.acceptNumber('5')">5</button>
+    <button ng-click="cal.acceptNumber('6')">6</button>
+    <button ng-click="cal.acceptOperator('-')">-</button>
+    <br/>
+    <button ng-click="cal.acceptNumber('1')">1</button>
+    <button ng-click="cal.acceptNumber('2')">2</button>
+    <button ng-click="cal.acceptNumber('3')">3</button>
+    <button ng-click="cal.acceptOperator('*')">*</button>
+    <br/>
+    <button ng-click="cal.acceptNumber('.')">.</button> 
+    <button ng-click="cal.acceptNumber('0')">0</button>
+    <button ng-click="cal.acceptOperator('=')">=</button>
+    <button ng-click="cal.acceptOperator('/')">/</button> 
+    <br/>
+    <button ng-click="cal.clearNumbers()">Clear</button>
+    
+    <br/>
+    
+    
+    <br/>
+    
+    <br/>
+    <br/>
+    <!--<h3>And the results is {{cal.results}}</h3>-->
+    
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>    
+    <script src="~/bower_components/angular/angular.min.js"></script>
+    <script src="~/ngApp/app.js"></script>
+   
+
+</body>
+</html>
